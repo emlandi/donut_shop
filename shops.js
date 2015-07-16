@@ -66,12 +66,12 @@ addNewShop.addEventListener("submit", function(e) {
 
   for (var i = 0; i < locationArray.length; i++) {
 
-    //If the location already exists, the newShop takes the place of the existing one. **THIS DOES NOT WORK**
+    //If the location already exists, the newShop takes the place of the existing one. **THIS DOES NOT WORK** It updates the array correctly but does not display in the right place.
     if (locationArray[i].name == newLocation) {
       locationArray[i] = newShop;
-      locationArray[i].minCust = newMin;
-      locationArray[i].maxCust = newMax;
-      locationArray[i].avDonuts = newAv;
+      locationArray[i].display()
+      //Need to use DOM to get it to find the existing location and append the new values here instead of at the end of the table.
+      break;
 
     //If it doesn't exist, it will add the newShop. **Right now, this adds everything regardless of it it already exists. The "if" part does not work.
     } else {

@@ -8,7 +8,7 @@ var Shop = function (name, minCust, maxCust, avDonuts) {
   this.total = 0;
 };
 
-//Creates total donuts per hour(based on random number of customers and average donuts bought) for 11 hours and places values in an array by using.push
+//Creates total donuts per hour(based on random number of customers and average donuts bought) for 11 hours and places values in an array
 Shop.prototype.donutsPerHour = function() {
   var hourly = [];
   for (var i = 0; i < this.hoursOpen; i++) {
@@ -35,13 +35,13 @@ Shop.prototype.display = function () {
     this.total += donutsArr[i];
   }
 
-  //Append totals donuts per day to table
+  //Appends total donuts per day to table
   var totalDonuts = document.createElement("td");
   totalDonuts.innerHTML = this.total;
   tr.appendChild(totalDonuts);
 };
 
-//This puts all of the different shop objects into an array
+//This creates new shop obects in an array
 var locationArray = [];
 
 locationArray.push(new Shop ("Downtown", 8, 43, 4.5));
@@ -54,7 +54,7 @@ for (var i=0; i < locationArray.length; i++) {
   locationArray[i].display();
 }
 
-//This is the event to add a new shop.
+//This is the event listener to add a new shop.
 var addNewShop = document.getElementById("addNewShop");
 addNewShop.addEventListener("submit", function(e) {
   e.preventDefault();
@@ -62,25 +62,23 @@ addNewShop.addEventListener("submit", function(e) {
   var newMin = parseInt(document.getElementById("newMin").value);
   var newMax = parseInt(document.getElementById("newMax").value);
   var newAv = parseInt(document.getElementById("newAv").value);
-
   var newShop = new Shop (newLocation, newMin, newMax, newAv);
 
-  locationArray.push(newShop);
-  newShop.display();
+  for (var i = 0; i < locationArray.length; i++) {
 
-  // //This should check if the location already exists.
-  // for (i = 0; i < locationArray.length; i++) {
-  //   //If the new location does not exist, add it to the table.
-  //   if (newLocation !== locationArray[i].name) {
-  //     locationArray.push(new Shop(newLocation, newMin, newMax, newAv));
-  //     locationArray[locationArray.length - 1].display();
-  //   }
+    //If the location already exists, the newShop takes the place of the existing one. **THIS DOES NOT WORK**
+    if (locationArray[i].name == newLocation) {
+      locationArray[i] = newShop;
+      locationArray[i].minCust = newMin;
+      locationArray[i].maxCust = newMax;
+      locationArray[i].avDonuts = newAv;
 
-  // //   If the new location already exists, delete it.
-  // //   if (check === true) {
-  // //   code here;
-  // //   }
-  // }
-
+    //If it doesn't exist, it will add the newShop. **Right now, this adds everything regardless of it it already exists. The "if" part does not work.
+    } else {
+      locationArray.push(newShop);
+      newShop.display();
+      break;
+    }
+  }
 }, false);
 

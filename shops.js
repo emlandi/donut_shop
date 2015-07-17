@@ -68,21 +68,23 @@ addNewShop.addEventListener("submit", function(e) {
   for (var i = 0; i < locationArray.length; i++) {
 
     //If the location already exists, update values. **THIS DOES NOT WORK** It updates the array correctly but adds new line to the bottom of the table instead of updating existing values.
-    var check = false;
+    var locationFound = false;
 
     if (locationArray[i].name == newLocation) {
       locationArray[i] = newShop;
-      locationArray[i].donutsPerHour();
-      locationArray[i].display(); //incorporate GetElementById and/or replaceChild??
+      // locationArray[i].donutsPerHour();
+      locationArray[i].display();
+      // document.getElementById("this.name").innerHTML = newShop ??
+      // document.getElementById("this.name").replaceChild = newShop ??
 
-      check = true;
+      locationFound = true;
 
       break;
     }
   }
 
   //If it doesn't exist, it will add the newShop to the end of the table.
-  if (check == false) {
+  if (locationFound == false) {
     locationArray.push(newShop);
     newShop.display();
   }

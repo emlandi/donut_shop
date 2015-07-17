@@ -25,6 +25,7 @@ Shop.prototype.display = function () {
   //Appends location name to table
   tr.innerHTML = this.name;
   table.appendChild(tr);
+  tr.id = this.name;
 
   //Appends donut per hour array to table
   var donutsArr = this.donutsPerHour();
@@ -66,19 +67,24 @@ addNewShop.addEventListener("submit", function(e) {
 
   for (var i = 0; i < locationArray.length; i++) {
 
-    //If the location already exists, the newShop takes the place of the existing one. **THIS DOES NOT WORK** It updates the array correctly but does not display in the right place.
+    //If the location already exists, update values. **THIS DOES NOT WORK** It updates the array correctly but adds new line to the bottom of the table instead of updating existing values.
+    var check = false;
+
     if (locationArray[i].name == newLocation) {
       locationArray[i] = newShop;
-      locationArray[i].display()
-      //Need to use DOM to get it to find the existing location and append the new values here instead of at the end of the table.
-      break;
+      locationArray[i].donutsPerHour();
+      locationArray[i].display(); //incorporate GetElementById and/or replaceChild??
 
-    //If it doesn't exist, it will add the newShop. **Right now, this adds everything regardless of it it already exists. The "if" part does not work.
-    } else {
-      locationArray.push(newShop);
-      newShop.display();
+      check = true;
+
       break;
     }
+  }
+
+  //If it doesn't exist, it will add the newShop to the end of the table.
+  if (check == false) {
+    locationArray.push(newShop);
+    newShop.display();
   }
 }, false);
 

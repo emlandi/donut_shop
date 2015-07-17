@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Donut Shop</title>
+  </head>
+
+  <body>
+    <head>
+      <h1>Donut Shop Sales</h1>
+    </head>
+    <table id="table">
+      <tr>
+        <th>Location Name</th>
+        <th>7 AM</th>
+        <th>8 AM</th>
+        <th>9 AM</th>
+        <th>10 AM</th>
+        <th>11 AM</th>
+        <th>12 PM</th>
+        <th>1 PM</th>
+        <th>2 PM</th>
+        <th>3 PM</th>
+        <th>4 PM</th>
+        <th>5 PM</th>
+        <th>Total</th>
+      </tr>
+    </table>
+    <br>
+    <form id="addNewShop">
+      <fieldset>
+        <legend>Add new donut shops here</legend>
+          <p>
+            <label for="New Location">Location Name: </label>
+            <input type="text" id="newLocation">
+          </p>
+          <p>
+            <label for="New Min">Minumum Customers: </label>
+            <input type="text" id="newMin">
+          </p>
+          <p>
+            <label for="New Max">Maximum Customers: </label>
+            <input type="text" id="newMax">
+          </p>
+          <p>
+            <label for="New Av">Average Number of Donuts Per Customer: </label>
+            <input type="text" id="newAv">
+          </p>
+          <input type="submit" value="Add Shop">
+      </fieldset>
+    </form>
+
+    <script src="shops.js"></script>
+
+  </body>
+
+</html>
+

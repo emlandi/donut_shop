@@ -9,6 +9,7 @@ body {
 /*#content {
   overflow: auto;
 }*/
+
 #dancing {
   position: fixed;
   height: 141px;
@@ -22,10 +23,10 @@ nav, footer, h2 {
   margin: 1%;
 }
 
-h1 {
+/*h1 {
   text-align: center;
   font-size: 4.5em;
-}
+}*/
 
 li {
   display: inline;
@@ -105,3 +106,79 @@ h2 {
   padding-right: 25px;
 }
 
+#header {
+  font-size: 5em;
+  letter-spacing: 10px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+span {
+  animation: 5s colours infinite linear;
+}
+
+span:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+span:nth-child(3) {
+  animation-delay: 1s;
+}
+
+span:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+span:nth-child(5) {
+  animation-delay: 2s;
+}
+
+span:nth-child(6) {
+  animation-delay: 2.5s;
+}
+
+span:nth-child(7) {
+  animation-delay: 0.5s;
+}
+
+span:nth-child(8) {
+  animation-delay: 1s;
+}
+
+span:nth-child(9) {
+  animation-delay: 1.5s;
+}
+
+span:nth-child(10) {
+  animation-delay: 2s;
+}
+
+span:nth-child(11) {
+  animation-delay: 2.5s;
+}
+
+span:nth-child(12) {
+  animation-delay: 0.5s;
+}
+
+span:nth-child(13) {
+  animation-delay: 1s;
+}
+
+
+@keyframes colours {
+  20% {
+    color: #9077f2;
+    transform: scale(1.2);
+  }
+  40% {
+    color: #f2f177;
+  }
+  60% {
+    color: #DD0048;
+  }
+
+  80% {
+    color: #05B8CC;
+  }
+}

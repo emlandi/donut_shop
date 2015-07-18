@@ -7,3 +7,4 @@ Used cupcake ipsum for paragraph content: http://www.cupcakeipsum.com/#/paragrap
 
 Color scheme inspired by Adobe Color, Vitamin C: https://color.adobe.com/Vitamin-C-color-theme-492199/
 
+Animated header from Code Pen: http://codepen.io/keefyboooo/pen/vOXjvR

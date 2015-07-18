@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="UTF-8">
-    <title>Donut Shop</title>
-    <link href="styles.css" type="text/css" rel="stylesheet" />
-    <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <title>Donut Shop</title>
+  <link href="styles.css" type="text/css" rel="stylesheet" />
+  <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+</head>
 
-  <body>
-    <head>
-      <h1>Donut Shop Sales</h1>
-    </head>
+<body>
 
-    <p id="p1"><img id="donuts" src="images/donuts.jpg" align="right">Halvah pudding caramels tootsie roll. Cotton candy gingerbread croissant pastry topping pastry. Wafer powder dragée jujubes. Topping wafer dragée cheesecake liquorice cookie gummies tiramisu jelly. Powder oat cake soufflé jujubes. Tart cookie candy gummi bears lollipop cake. Chocolate pastry cheesecake. Wafer powder brownie gummi bears tiramisu biscuit chupa chups pudding oat cake. Sweet jujubes icing. Ice cream macaroon cheesecake croissant.</p>
+  <img id="dancing" src="images/dancing.png">
 
-    <br>
+  <header>
+    <h1>The Donut Shop</h1>
+    <nav>
+      <ul>
+        <li><a href="http://www.imdb.com/title/tt2224026/">Home</a></li>
+        <li><a href="http://www.cafepress.com/+donut+accessories">Products</a></li>
+        <li><a href="http://www.imdb.com/title/tt0118884/">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="content">
+    <p id="p1" class="p">Halvah pudding caramels tootsie roll. Cotton candy gingerbread croissant pastry topping pastry. Wafer powder dragée jujubes. Topping wafer dragée cheesecake liquorice cookie gummies tiramisu jelly. Powder oat cake soufflé jujubes. Tart cookie candy gummi bears lollipop cake. Chocolate pastry cheesecake. Wafer powder brownie gummi bears tiramisu biscuit chupa chups pudding oat cake. Sweet jujubes icing. Ice cream macaroon cheesecake croissant.</p>
+
+    <img id="donuts" src="images/donuts.jpg" align="right">
 
     <table id="table">
       <tr>
@@ -35,7 +46,7 @@
       </tr>
     </table>
 
-    <br>
+<!-- <iframe src="https://www.youtube.com/embed/uf3URSCYbuU" width="320" height="195" frameborder="0" allowfullscreen></iframe> -->
 
     <form id="addNewShop">
       <fieldset>
@@ -45,7 +56,7 @@
             <input type="text" id="newLocation">
           </p>
           <p>
-            <label for="New Min">Minumum Customers: </label>
+            <label for="New Min">Minimum Customers: </label>
             <input type="text" id="newMin">
           </p>
           <p>
@@ -53,20 +64,24 @@
             <input type="text" id="newMax">
           </p>
           <p>
-            <label for="New Av">Average Number of Donuts Per Customer: </label>
+            <label for="New Av">Average Donuts Per Customer: </label>
             <input type="text" id="newAv">
           </p>
-          <input type="submit" value="Add Shop">
+          <input id="submit" type="submit" value="Add Shop">
       </fieldset>
     </form>
 
-    <h2>Cupcake Ipsum Dolor Sit Amet</h3>
+    <h2>Cupcake Ipsum Dolor Sit Amet</h2>
 
-    <p id="p2"><img id="friendly" src="images/friendly.jpg" align="left">Bear claw fruitcake sweet. Sesame snaps danish macaroon. Croissant pudding sweet roll soufflé dragée croissant apple pie. Gummies jujubes danish halvah brownie marzipan. Wafer soufflé jelly beans cake dragée sesame snaps caramels jelly beans danish. Danish muffin biscuit chupa chups. Cookie lemon drops cheesecake. Jelly beans chocolate bar bonbon cookie pudding cookie liquorice cake. Cheesecake pastry jelly lemon drops gummies sugar plum gingerbread gummi bears. Sweet sugar plum donut jelly.</p>
+    <p id="p2" class="p">
+    <img id="friendly" src="images/friendly.jpg" align="left">Bear claw fruitcake sweet. Sesame snaps danish macaroon. Croissant pudding sweet roll soufflé dragée croissant apple pie. Gummies jujubes danish halvah brownie marzipan. Wafer soufflé jelly beans cake dragée sesame snaps caramels jelly beans danish. Danish muffin biscuit chupa chups. Cookie lemon drops cheesecake. Jelly beans chocolate bar bonbon cookie pudding cookie liquorice cake. Cheesecake pastry jelly lemon drops gummies sugar plum gingerbread gummi bears. Sweet sugar plum donut jelly.</p>
+  </div>
 
-    <script src="shops.js"></script>
+  <footer>&copy; 2015 Chocolate Pastry Jujubes</footer>
 
-  </body>
+  <script src="shops.js"></script>
+
+</body>
 
 </html>
 

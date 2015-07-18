@@ -1,33 +1,57 @@
 body {
+  width:90%;
+  margin: 0 auto;
   background-color: #BEDB39;
   font-family: "Lora", georgia, serif;
   color: #004358;
 }
 
+/*#content {
+  overflow: auto;
+}*/
+#dancing {
+  position: fixed;
+  height: 141px;
+  width: 110px;
+  left: 75%;
+}
+nav, footer, h2 {
+  background-color: #1F8A70;
+  text-align: center;
+  padding: 0.5em;
+  margin: 1%;
+}
+
 h1 {
   text-align: center;
-  font-size: 60px;
-  text-shadow: 2px 2px 7px #666666;
-  background-color: #1F8A70;
-  height: 120px;
-  border-radius: 40px 80px;
+  font-size: 4.5em;
+}
 
+li {
+  display: inline;
+  padding: 0.5em;
 }
 
 #donuts {
-  height: 300px;
-  width: 300px;
+  height: 500px;
+  width: 500px;
+  left: 30%;
+  position: absolute;
+  z-index: -1;
 }
 
 #p1:first-letter {
   font-size: 200%;
 }
 
-}
-
 table {
   border-style: solid;
+  border-color: #1F8A70;
   text-align: center;
+  position: relative;
+  top: 1em;
+  left: 5em;
+  width: 80%;
 }
 
 th {
@@ -41,30 +65,37 @@ tr {
   background-color: #ffffff;
 }
 
+form {
+  width: 40%;
+  position: relative;
+  margin: 5%;
+}
+
 legend {
   font-weight: bold;
   text-shadow: -1px -1px #111111;
   border-color: #004358;
   border-style: dotted;
-  padding: 12px;
+  border-radius: 50px;
+  padding: 10px;
 }
 
 input {
-  background-color: #FFE11A;
+  background-color: #BEDB39;
   font-family: "Lora", georgia, serif;
 }
 
 h2 {
   text-align: center;
   text-transform: uppercase;
-  background-color: #1F8A70;
   height: 40px;
   border-radius: 40px 80px;
 }
 
 #p2 {
-  font-size: 15px;
+  font-size: 1em;
   font-style: oblique;
+  text-align: justify;
 }
 
 #friendly {
@@ -72,6 +103,5 @@ h2 {
   width: 300px;
   padding-left: 25px;
   padding-right: 25px;
-  padding-bottom: 25px;
 }
 

@@ -1,0 +1,107 @@
+body {
+  width:90%;
+  margin: 0 auto;
+  background-color: #BEDB39;
+  font-family: "Lora", georgia, serif;
+  color: #004358;
+}
+
+/*#content {
+  overflow: auto;
+}*/
+#dancing {
+  position: fixed;
+  height: 141px;
+  width: 110px;
+  left: 75%;
+}
+nav, footer, h2 {
+  background-color: #1F8A70;
+  text-align: center;
+  padding: 0.5em;
+  margin: 1%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4.5em;
+}
+
+li {
+  display: inline;
+  padding: 0.5em;
+}
+
+#donuts {
+  height: 500px;
+  width: 500px;
+  left: 30%;
+  position: absolute;
+  z-index: -1;
+}
+
+#p1:first-letter {
+  font-size: 200%;
+}
+
+table {
+  border-style: solid;
+  border-color: #1F8A70;
+  text-align: center;
+  position: relative;
+  top: 1em;
+  left: 5em;
+  width: 80%;
+}
+
+th {
+  font-weight: bold;
+  padding: 10px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+tr {
+  background-color: #ffffff;
+}
+
+form {
+  width: 40%;
+  position: relative;
+  margin: 5%;
+}
+
+legend {
+  font-weight: bold;
+  text-shadow: -1px -1px #111111;
+  border-color: #004358;
+  border-style: dotted;
+  border-radius: 50px;
+  padding: 10px;
+}
+
+input {
+  background-color: #BEDB39;
+  font-family: "Lora", georgia, serif;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  height: 40px;
+  border-radius: 40px 80px;
+}
+
+#p2 {
+  font-size: 1em;
+  font-style: oblique;
+  text-align: justify;
+}
+
+#friendly {
+  height: 125px;
+  width: 300px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
